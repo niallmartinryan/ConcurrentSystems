@@ -1,0 +1,5 @@
+Vectorisation - 
+
+By unrolling the loops for the x and y loops, the channel loop can be used to access all elements four at a time both for the image and the Kernel
+After all the elements have been multiplied and added together into one vector. The lanes of the vector are then added horizontally.Then we extract one of the floats which is the sum for the output. If the number of elements is odd, we multiply and add the last image element manually without vectorising.
+
